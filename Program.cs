@@ -16,6 +16,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
 
 // 🔑 JWT Configuration
 var key = builder.Configuration.GetValue<string>("APISettings:Secreta");
+if (string.IsNullOrEmpty(key))
+{
+    throw new InvalidOperationException("JWT Secret key is not configured");
+}
 var keyBytes = Encoding.ASCII.GetBytes(key);
 
 // Agregamos los repositorios
@@ -25,6 +29,18 @@ builder.Services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
 builder.Services.AddScoped<IDetallePedidoRepositorio, DetallePedidoRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
+// 💾 CACHE CONFIGURATION
+builder.Services.AddMemoryCache(options =>
+{
+    options.SizeLimit = 1024; // Límite de 1024 entradas
+});
+
+builder.Services.AddResponseCaching(options =>
+{
+    options.MaximumBodySize = 1024 * 1024; // 1MB máximo
+    options.UseCaseSensitivePaths = false;
+});
+
 // 🌐 CORS Configuration
 builder.Services.AddCors(options =>
 {
@@ -33,15 +49,19 @@ builder.Services.AddCors(options =>
         policy.WithOrigins("http://localhost:5030") // tu frontend
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // 👈 Permitir cookies/credenciales
+              .AllowCredentials(); // Permitir cookies/credenciales
     });
 });
 
 // Agregamos el AutoMapper
 builder.Services.AddAutoMapper(typeof(PolleriaMapper));
 
-// Controladores
-builder.Services.AddControllers();
+// Controladores con filtro de caché global (opcional)
+builder.Services.AddControllers(options =>
+{
+    // 🗄️ Aplicar caché global solo a métodos GET de lectura
+    // options.Filters.Add(new GlobalCacheFilter(300)); // Descomenta si quieres caché global
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -49,7 +69,12 @@ builder.Services.AddEndpointsApiExplorer();
 // 📖 Swagger Configuration with JWT Support
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Polleria API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo 
+    { 
+        Title = "Polleria API", 
+        Version = "v1",
+        Description = "API para gestión de pollería con autenticación JWT y caché"
+    });
     
     // 🔐 JWT Authentication in Swagger
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -90,7 +115,7 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = false;
+    options.RequireHttpsMetadata = false; // true en producción
     options.SaveToken = true;
     options.TokenValidationParameters = new TokenValidationParameters
     {
@@ -98,21 +123,27 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(keyBytes),
         ValidateIssuer = false,
         ValidateAudience = false,
-        ValidateLifetime = true, // 👈 Validar expiración del token
-        ClockSkew = TimeSpan.Zero // 👈 No tolerancia de tiempo
+        ValidateLifetime = true, // Validar expiración del token
+        ClockSkew = TimeSpan.Zero // No tolerancia de tiempo
     };
     
-    // 🔍 Eventos para debugging (opcional)
+    // 🔍 Eventos para debugging (opcional - remover en producción)
     options.Events = new JwtBearerEvents
     {
         OnAuthenticationFailed = context =>
         {
-            Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+            if (builder.Environment.IsDevelopment())
+            {
+                Console.WriteLine($"Authentication failed: {context.Exception.Message}");
+            }
             return Task.CompletedTask;
         },
         OnTokenValidated = context =>
         {
-            Console.WriteLine($"Token validated for user: {context.Principal?.Identity?.Name}");
+            if (builder.Environment.IsDevelopment())
+            {
+                Console.WriteLine($"Token validated for user: {context.Principal?.Identity?.Name}");
+            }
             return Task.CompletedTask;
         }
     };
@@ -141,17 +172,22 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Polleria API V1");
+        c.DocumentTitle = "Polleria API - Swagger";
     });
 }
 
 // 🌐 CORS debe ir antes de Authentication
 app.UseCors("AllowFrontend");
 
+// 💾 Response Caching debe ir antes de Authentication
+app.UseResponseCaching();
+
 // 🔒 Authentication & Authorization Pipeline
-app.UseAuthentication(); // 👈 Primero autenticación
-app.UseAuthorization();  // 👈 Luego autorización
+app.UseAuthentication(); // Primero autenticación
+app.UseAuthorization();  // Luego autorización
 
 app.UseHttpsRedirection();
 app.MapControllers();
 
+Console.WriteLine("🚀 Polleria API iniciada con JWT y Caché configurados");
 app.Run();

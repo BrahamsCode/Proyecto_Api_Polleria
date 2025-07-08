@@ -23,8 +23,9 @@ namespace Proyecto_Api_Polleria.Controllers
             this._respuestasAPI = new();
         }
 
+        // MÉTODO SIN AUTORIZACIÓN - Solo administradores deberían ver todos los usuarios
         [HttpGet]
-        [Authorize] 
+        [Authorize] // Requiere token válido
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -41,8 +42,9 @@ namespace Proyecto_Api_Polleria.Controllers
             return Ok(listaUsuarioDto);
         }
 
+        // MÉTODO SIN AUTORIZACIÓN - Login debe ser público
         [HttpPost("Login")]
-        [AllowAnonymous]
+        [AllowAnonymous] // Explícitamente permite acceso sin token
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -59,15 +61,22 @@ namespace Proyecto_Api_Polleria.Controllers
                 return BadRequest(_respuestasAPI);
             }
 
+            // ✅ CORRECCIÓN: Devolver el token completo al frontend
             _respuestasAPI.StatusCode = HttpStatusCode.OK;
             _respuestasAPI.IsSuccess = true;
-            _respuestasAPI.Result = respuestaLogin;
+            _respuestasAPI.Result = new 
+            {
+                token = respuestaLogin.Token,        // 🔑 Token JWT
+                usuario = respuestaLogin.usuario,    // 👤 Datos del usuario
+                rol = respuestaLogin.Rol            // 🛡️ Rol del usuario
+            };
             
             return Ok(_respuestasAPI);
         }
 
+        // MÉTODO SIN AUTORIZACIÓN - Registro debe ser público
         [HttpPost("Registro")]
-        [AllowAnonymous]
+        [AllowAnonymous] // Permite registro sin token
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -101,8 +110,9 @@ namespace Proyecto_Api_Polleria.Controllers
             return Ok(_respuestasAPI);
         }
 
+        // MÉTODO CON AUTORIZACIÓN - Solo usuarios autenticados pueden cambiar su password
         [HttpPatch("ActualizarPass")]
-        [Authorize]
+        [Authorize] // Requiere token válido
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
