@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Proyecto_Api_Polleria.Modelos;
 using Proyecto_Api_Polleria.Modelos.Dtos;
@@ -8,6 +9,7 @@ namespace Proyecto_Api_Polleria.Controllers
 {
     [Route("api/pedido")]
     [ApiController]
+    [Authorize] 
     public class PedidoController : ControllerBase
     {
         private readonly IPedidoRepositorio _pRepo;
@@ -20,9 +22,8 @@ namespace Proyecto_Api_Polleria.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult GetPedido()
         {
             var listaPedido = _pRepo.GetPedido();
@@ -36,12 +37,12 @@ namespace Proyecto_Api_Polleria.Controllers
             return Ok(listaPedidoDto);
         }
 
+        // GET por ID protegido
         [HttpGet("{pedidoId:int}", Name = "GetPedido")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult GetPedido(int pedidoId)
         {
             if (pedidoId <= 0)
@@ -63,19 +64,13 @@ namespace Proyecto_Api_Polleria.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
         public IActionResult CrearPedido([FromBody] CrearPedidoDto crearPedidoDto)
         {
             if (crearPedidoDto == null || !ModelState.IsValid)
             {
                 return BadRequest("Datos invalidos para crear pedido");
-            }
-
-            if (_pRepo.ExistePedido(crearPedidoDto.Cliente))
-            {
-                return Conflict("Ya existe un pedido con ese cliente");
             }
 
             var pedido = _mapper.Map<Pedido>(crearPedidoDto);
@@ -85,20 +80,19 @@ namespace Proyecto_Api_Polleria.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error al guardar el pedido");
             }
 
-            var pedidoDto = _mapper.Map<Pedido>(crearPedidoDto);
-
-            return CreatedAtRoute("GetPedido", new { pedidoId = pedidoDto.Id }, pedidoDto);
+            var pedidoDto = _mapper.Map<PedidoDto>(pedido);
+            return CreatedAtRoute("GetPedido", new { pedidoId = pedido.Id }, pedidoDto);
         }
+
         [HttpPatch("{pedidoId:int}", Name = "ActualizarPatchPedido")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-
         public IActionResult ActualizarPatchPedido(int pedidoId, [FromBody] PedidoDto pedidoDto)
         {
             if (pedidoDto == null || !ModelState.IsValid || pedidoId != pedidoDto.Id)
             {
-                return BadRequest("Datos invalidos para crear el pedido");
+                return BadRequest("Datos invalidos para actualizar el pedido");
             }
 
             var pedidoExistente = _pRepo.GetPedido(pedidoId);
@@ -118,22 +112,21 @@ namespace Proyecto_Api_Polleria.Controllers
 
             return NoContent();
         }
-        //Borrar
+
         [HttpDelete("{pedidoId:int}", Name = "BorrarPatchPedido")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-
         public IActionResult BorrarPatchPedido(int pedidoId)
         {
-            if (_pRepo.ExistePedido(pedidoId) == null)
+            var pedido = _pRepo.GetPedido(pedidoId);
+            
+            if (pedido == null)
             {
-                return NotFound($"No se encontro la pedido con el Id {pedidoId}");
+                return NotFound($"No se encontro el pedido con el Id {pedidoId}");
             }
 
-            var pedido = _pRepo.GetPedido(pedidoId);
-
-            if (!_pRepo.EliminarPedido(pedido)) //si no se elimina la pedido
+            if (!_pRepo.EliminarPedido(pedido))
             {
                 ModelState.AddModelError("", $"Algo salio mal al eliminar el registro {pedido.Cliente}");
                 return StatusCode(500, ModelState);

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Proyecto_Api_Polleria.Modelos;
 using Proyecto_Api_Polleria.Modelos.Dtos;
@@ -8,6 +9,7 @@ namespace Proyecto_Api_Polleria.Controllers
 {
     [Route("api/categorias")]
     [ApiController]
+    [Authorize] 
     public class CategoriaController : ControllerBase
     {
         private readonly ICategoriaRepositorio _ctRepo;
@@ -20,9 +22,8 @@ namespace Proyecto_Api_Polleria.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [AllowAnonymous] 
         [ProducesResponseType(StatusCodes.Status200OK)]
-
         public IActionResult GetCategorias()
         {
             var listaCategorias = _ctRepo.GetCategoria();
@@ -37,11 +38,10 @@ namespace Proyecto_Api_Polleria.Controllers
         }
 
         [HttpGet("{categoriaId:int}", Name = "GetCategoria")]
+        [AllowAnonymous]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
         public IActionResult GetCategoria(int categoriaId)
         {
             if (categoriaId <= 0)
@@ -63,7 +63,7 @@ namespace Proyecto_Api_Polleria.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
         public IActionResult CrearCategoria([FromBody] CrearCategoriaDto crearCategoriaDto)
@@ -98,7 +98,7 @@ namespace Proyecto_Api_Polleria.Controllers
         {
             if (categoriaDto == null || !ModelState.IsValid || categoriaId != categoriaDto.Id)
             {
-                return BadRequest("Datos invalidos para crear la categoria");
+                return BadRequest("Datos invalidos para actualizar la categoria");
             }
 
             var categoriaExistente = _ctRepo.GetCategoria(categoriaId);
@@ -118,7 +118,7 @@ namespace Proyecto_Api_Polleria.Controllers
 
             return NoContent();
         }
-        //Borrar
+
         [HttpDelete("{categoriaId:int}", Name = "BorrarPatchCategoria")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -133,7 +133,7 @@ namespace Proyecto_Api_Polleria.Controllers
 
             var categoria = _ctRepo.GetCategoria(categoriaId);
 
-            if (!_ctRepo.EliminarCategoria(categoria)) //si no se elimina la categoria
+            if (!_ctRepo.EliminarCategoria(categoria))
             {
                 ModelState.AddModelError("", $"Algo salio mal al eliminar el registro {categoria.Nombre}");
                 return StatusCode(500, ModelState);

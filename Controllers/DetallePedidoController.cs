@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Proyecto_Api_Polleria.Modelos;
 using Proyecto_Api_Polleria.Modelos.Dtos;
@@ -8,6 +9,7 @@ namespace Proyecto_Api_Polleria.Controllers
 {
     [Route("api/detallePedido")]
     [ApiController]
+    [Authorize]
     public class DetallePedidoController : ControllerBase
     {
         private readonly IDetallePedidoRepositorio _dpRepo;
@@ -20,9 +22,8 @@ namespace Proyecto_Api_Polleria.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status200OK)]
-
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult GetDetallePedido()
         {
             var listaDetallePedido = _dpRepo.GetDetallePedido();
@@ -40,8 +41,7 @@ namespace Proyecto_Api_Polleria.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public IActionResult GetDetallePedido(int detallepedidoId)
         {
             if (detallepedidoId <= 0)
@@ -63,9 +63,8 @@ namespace Proyecto_Api_Polleria.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-
         public IActionResult CrearDetallePedido([FromBody] CrearDetallePedidoDto crearDetallePedidoDto)
         {
             if (crearDetallePedidoDto == null || !ModelState.IsValid)
@@ -81,19 +80,18 @@ namespace Proyecto_Api_Polleria.Controllers
             }
 
             var detallepedidoDto = _mapper.Map<DetallePedidoDto>(detallepedido);
-
             return CreatedAtRoute("GetDetallePedido", new { detallepedidoId = detallepedido.Id }, detallepedidoDto);
         }
+
         [HttpPatch("{detallepedidoId:int}", Name = "ActualizarPatchDetallePedido")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-
         public IActionResult ActualizarPatchDetallePedido(int detallepedidoId, [FromBody] DetallePedidoDto detallepedidoDto)
         {
             if (detallepedidoDto == null || !ModelState.IsValid || detallepedidoId != detallepedidoDto.Id)
             {
-                return BadRequest("Datos invalidos para crear el detallepedido");
+                return BadRequest("Datos invalidos para actualizar el detallepedido");
             }
 
             var detallepedidoExistente = _dpRepo.GetDetallePedido(detallepedidoId);
@@ -113,22 +111,21 @@ namespace Proyecto_Api_Polleria.Controllers
 
             return NoContent();
         }
-        //Borrar
+
         [HttpDelete("{detallepedidoId:int}", Name = "BorrarPatchDetallePedido")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-
         public IActionResult BorrarPatchDetallePedido(int detallepedidoId)
         {
-            if (_dpRepo.ExisteDetallePedido(detallepedidoId) == null)
-            {
-                return NotFound($"No se encontro la detallepedido con el Id {detallepedidoId}");
-            }
-
             var detallepedido = _dpRepo.GetDetallePedido(detallepedidoId);
 
-            if (!_dpRepo.EliminarDetallePedido(detallepedido)) //si no se elimina la detallepedido
+            if (detallepedido == null)
+            {
+                return NotFound($"No se encontro el detallepedido con el Id {detallepedidoId}");
+            }
+
+            if (!_dpRepo.EliminarDetallePedido(detallepedido))
             {
                 ModelState.AddModelError("", $"Algo salio mal al eliminar el registro {detallepedido.Id}");
                 return StatusCode(500, ModelState);
