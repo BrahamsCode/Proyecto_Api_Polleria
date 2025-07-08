@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj": {}
+    "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj": {
+    "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+        "projectUniqueName": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
         "projectName": "Proyecto_Api_Polleria",
-        "projectPath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+        "projectPath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
         "packagesPath": "C:\\Users\\Brahams\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\obj\\",
+        "outputPath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

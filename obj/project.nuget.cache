@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4WA1J6a40e8=",
+  "dgSpecHash": "cphLqrt/w1s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+  "projectFilePath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Brahams\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\Brahams\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
@@ -93,10 +93,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "El paquete \"CommonServiceLocator 1.3.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+      "message": "Package 'CommonServiceLocator 1.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+      "filePath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
       "libraryId": "CommonServiceLocator",
       "targetGraphs": [
         "net8.0"
@@ -105,10 +105,10 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "El paquete \"XAct.Core.PCL 0.0.5014\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" en lugar de la plataforma de destino del proyecto \"net8.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "projectPath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+      "message": "Package 'XAct.Core.PCL 0.0.5014' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "projectPath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
+      "filePath": "C:\\Users\\Brahams\\Desktop\\apis\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.csproj",
       "libraryId": "XAct.Core.PCL",
       "targetGraphs": [
         "net8.0"
