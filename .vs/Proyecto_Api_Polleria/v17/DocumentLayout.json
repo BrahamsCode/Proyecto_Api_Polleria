@@ -1,0 +1,344 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\repositorio\\irepositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:repositorio\\irepositorio\\iusuariorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\proyecto_api_polleria.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:proyecto_api_polleria.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\repositorio\\detallepedidorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:repositorio\\detallepedidorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\repositorio\\irepositorio\\idetallepedidorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:repositorio\\irepositorio\\idetallepedidorepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuarioactualizarpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuarioactualizarpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\respuestasapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\respuestasapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuarioregistrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuarioregistrodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuariologinrespuestadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuariologinrespuestadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuariologindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuariodatosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuariodatosdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:modelos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|c:\\users\\brahams\\source\\repos\\proyecto_api_polleria\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3E39BB-FFF1-4A8C-987E-F8365F83EDDE}|Proyecto_Api_Polleria.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{873151d0-cf2e-48cc-b4bf-ad0394f6a3c3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UsuarioActualizarPasswordDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioActualizarPasswordDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioActualizarPasswordDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioActualizarPasswordDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioActualizarPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:26:08.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RespuestasAPI.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\RespuestasAPI.cs",
+              "RelativeDocumentMoniker": "Modelos\\RespuestasAPI.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\RespuestasAPI.cs",
+              "RelativeToolTip": "Modelos\\RespuestasAPI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T00:36:27.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:46:42.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Pedido.cs",
+              "RelativeDocumentMoniker": "Modelos\\Pedido.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Pedido.cs",
+              "RelativeToolTip": "Modelos\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T02:16:22.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-03T23:35:43.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAADwv1kAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T23:34:25.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUsuarioRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\IRepositorio\\IUsuarioRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:46:10.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\WeatherForecast.cs",
+              "RelativeToolTip": "WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T01:20:47.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Proyecto_Api_Polleria.http",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.http",
+              "RelativeDocumentMoniker": "Proyecto_Api_Polleria.http",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Proyecto_Api_Polleria.http",
+              "RelativeToolTip": "Proyecto_Api_Polleria.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-07-08T01:20:53.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DetallePedidoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\DetallePedidoRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\DetallePedidoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\DetallePedidoRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\DetallePedidoRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T02:18:14.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDetallePedidoRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\IRepositorio\\IDetallePedidoRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\IRepositorio\\IDetallePedidoRepositorio.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Repositorio\\IRepositorio\\IDetallePedidoRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\IRepositorio\\IDetallePedidoRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T02:15:27.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DetallePedido.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\DetallePedido.cs",
+              "RelativeDocumentMoniker": "Modelos\\DetallePedido.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\DetallePedido.cs",
+              "RelativeToolTip": "Modelos\\DetallePedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T02:15:32.69Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsuarioRegistroDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioRegistroDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioRegistroDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioRegistroDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioRegistroDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:45:18.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UsuarioLoginRespuestaDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioLoginRespuestaDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:45:02.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsuarioLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioLoginDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioLoginDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioLoginDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:44:41.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UsuarioDatosDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioDatosDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioDatosDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioDatosDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioDatosDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:44:09.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsuarioDto.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioDto.cs",
+              "RelativeDocumentMoniker": "Modelos\\Dtos\\UsuarioDto.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Dtos\\UsuarioDto.cs",
+              "RelativeToolTip": "Modelos\\Dtos\\UsuarioDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:43:48.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Usuario.cs",
+              "RelativeDocumentMoniker": "Modelos\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Modelos\\Usuario.cs",
+              "RelativeToolTip": "Modelos\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T02:43:24.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Brahams\\source\\repos\\Proyecto_Api_Polleria\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T03:30:48.04Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

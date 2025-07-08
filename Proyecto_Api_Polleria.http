@@ -1,0 +1,6 @@
+@Proyecto_Api_Polleria_HostAddress = http://localhost:5256
+
+GET {{Proyecto_Api_Polleria_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
